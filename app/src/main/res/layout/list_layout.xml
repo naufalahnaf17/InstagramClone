@@ -2,30 +2,29 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10px">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <!-- TextView Nama Mahasiwa -->
-        <TextView
-            android:id="@+id/txt_caption"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:id="@+id/gambar"
+                android:src="@drawable/instagram"
+                android:scaleType="centerCrop"/>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:id="@+id/gambar"
-            android:src="@drawable/instagram"
-            android:scaleType="centerCrop"/>
+            <TextView
+                android:id="@+id/txt_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gambar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_centerHorizontal="true"/>
 
-    </LinearLayout>
+        </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
